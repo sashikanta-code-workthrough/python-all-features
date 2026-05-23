@@ -7,6 +7,7 @@ from learnpy.lessons.async_demo import async_demo
 from learnpy.lessons.basics import collections_demo, hello
 from learnpy.lessons.logging_demo import logging_demo
 from learnpy.lessons.oop import dataclasses_demo
+from learnpy.lessons.variable_demo import variable_demo
 
 LessonFn = Callable[[], None]
 
@@ -19,6 +20,7 @@ class LessonNotFoundError(RuntimeError):
 _LESSONS: dict[str, LessonFn] = {
     "basics.hello": hello,
     "basics.collections": collections_demo,
+    "basics.variables": variable_demo,
     "oop.dataclasses": dataclasses_demo,
     "logging.demo": logging_demo,
     "advanced.context_manager": context_manager_demo,
